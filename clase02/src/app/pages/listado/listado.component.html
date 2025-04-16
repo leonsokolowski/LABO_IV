@@ -1,1 +1,18 @@
-<p>listado works!</p>
+<h1>Listado Autos</h1>
+<!-- Ejemplo if -->
+@if(hayAutos){
+    <h1>Hay autos</h1>
+}@else {
+    <h1>No hay autos</h1>
+}
+
+@for(auto of autos(); track auto.id)
+{
+    <div style="display: flex">
+        <p>{{auto.id}}-</p>
+        <p>{{auto.marca}}-</p>
+        <p>{{auto.modelo}}-</p>
+        <p>{{auto.precio}}</p>  
+        <button (click)="eliminar(auto.id!)">Eliminar</button>
+    </div>
+}

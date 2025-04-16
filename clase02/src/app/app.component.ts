@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { DatabaseService } from './services/database.service';
 import {Auto} from "./classes/auto";
+import { AuthService } from './services/auth.service';
 
 
 @Component({
@@ -12,8 +13,8 @@ import {Auto} from "./classes/auto";
 })
 export class AppComponent {
   title = 'clase02';
-  db_service = inject(DatabaseService)
-
+  db_service = inject(DatabaseService);
+  auth= inject(AuthService);
   constructor()
   {
     this.db_service.listar();

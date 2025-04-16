@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  auth = inject(AuthService);
 
+  logearse()
+  {
+    this.auth.iniciarSesion("Kokorito525@gmail.com", "locura123");
+    // this.auth.iniciarSesion("leonsokolowski@gmail.com", "papa");
+  }
 }
