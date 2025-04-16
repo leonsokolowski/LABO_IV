@@ -1,0 +1,20 @@
+<p>bindeos works!</p>
+<!-- Bindeo - conectar variable con vista-->
+<!-- Desde el ts a la vista html-->
+<h1>Titulo: {{ title }} </h1>
+
+<!-- Bindeo - conectar variable con vista-->
+<!-- Desde el ts a una propiedad html-->
+<img [src]="urlImagen" alt="error" width="150" height="150"/>
+
+<!-- Bindeo - desde el html llamar a un metodo de instancia de la clase-->
+<!-- Desde la porpiedad html al ts-->
+<button (click)="cambiarTitle('UTN FRA')">Cambiar Titulo</button>
+
+<!-- Bindeo doble - desde el html a ts y viceversa-->
+<!-- Siempre desde los input-->
+  <!--Este input cambie el valor de title
+  Si cambio el valor de title, cambie el valor del input-->
+<!-- Propiedades como (evento) y como [atributo]-->
+<input type="text" [(ngModel)]="title"/>
+<!-- Para que funcione se necesita importar el modulo de Formsmodule-->

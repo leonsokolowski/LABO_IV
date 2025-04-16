@@ -1,0 +1,86 @@
+/* Reset global */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+::ng-deep html, ::ng-deep body {
+height: 100% !important;
+margin: 0 !important;
+padding: 0 !important;
+background-color: #ffe09e !important; /* Gris suave con !important */
+font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+.auth-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    animation: cardAppear 0.6s ease-out forwards;
+    text-align: center;
+  }
+  
+  .auth-container h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .welcome-message {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+  }
+  
+  .home-actions button {
+    background-color: #ffac68;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .home-actions button:hover {
+    background-color: #ff8622;
+  }
+  
+  .home-actions a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+  
+  .home-actions a:hover {
+    color: #ff8622;
+    text-decoration: underline;
+  }
+  
+  @keyframes cardAppear {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -45%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
