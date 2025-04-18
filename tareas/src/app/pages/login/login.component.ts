@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Renderer2 } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import {RouterLink, RouterModule} from '@angular/router';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  imports: [CommonModule, FormsModule, RouterLink, RouterModule],
+  imports: [CommonModule, RouterLink, RouterModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
